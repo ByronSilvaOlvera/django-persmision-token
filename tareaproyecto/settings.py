@@ -39,8 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cliente',
     'rest_framework',
+    'corsheaders',
+
     'snippets.apps.SnippetsConfig',
     'usuario.apps.UsuarioConfig',
+    'tarea.apps.TareaConfig',
 ]
 
 MIDDLEWARE = [
@@ -51,6 +54,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+     
+     #CORS
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+
 ]
 
 ROOT_URLCONF = 'tareaproyecto.urls'

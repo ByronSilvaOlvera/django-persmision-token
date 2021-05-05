@@ -21,4 +21,7 @@ urlpatterns = [
     path('users/', include('cliente.urls')),
     path('', include('snippets.urls')),
     path('', include('usuario.urls')),
+    path('', include('tarea.urls')),
+    #PERMISO
+    path('api-auth/', include('rest_framework.urls')),
 ]

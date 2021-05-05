@@ -24,7 +24,7 @@ content-type: application/json
 }
 
 ####
-PUT http://127.0.0.1:8000/snippets/1
+PUT http://127.0.0.1:8000/snippets/1/
 content-type: application/json
 
 {
