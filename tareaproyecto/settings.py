@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'cliente',
     'rest_framework',
     'snippets.apps.SnippetsConfig',
+    'usuario.apps.UsuarioConfig',
 ]
 
 MIDDLEWARE = [

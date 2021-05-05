@@ -22,3 +22,11 @@ content-type: application/json
 {
     "code"    : "ful-id"
 }
+
+####
+PUT http://127.0.0.1:8000/snippets/1
+content-type: application/json
+
+{
+    "code"    : "ful-id-eee"
+}
