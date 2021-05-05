@@ -1,0 +1,24 @@
+
+
+GET http://127.0.0.1:8000/users/
+####
+#LIST
+GET http://127.0.0.1:8000/snippets/
+####
+## DETALLE ID=1
+GET http://127.0.0.1:8000/snippets/1
+####
+## CODE="by code"
+POST  http://127.0.0.1:8000/snippets/ code="by code"
+
+####
+POST  http://127.0.0.1:8000/snippets/ code="ful-id"
+content-type: application/json
+####
+## create un nuevo
+POST http://127.0.0.1:8000/snippets/
+content-type: application/json
+
+{
+    "code"    : "ful-id"
+}
