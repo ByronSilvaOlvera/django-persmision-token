@@ -8,6 +8,10 @@ __pycache__/
 
 tarea/__pycache__
 /tarea/migrations/
+perfiles/migrations
+usuario/migrations/
+snippets/migrations/
+cliente/migrations/
 
 # Django stuff:
 
