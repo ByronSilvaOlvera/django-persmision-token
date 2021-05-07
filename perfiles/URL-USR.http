@@ -1,0 +1,82 @@
+
+#Authorization: Basic admin:by123456
+POST http://127.0.0.1:8000/perfil/api-token-auth/
+content-type: application/json 
+Authorization: Basic alex:al123456
+
+{
+   "username" : "admin",
+   "password" : "by1234567"
+}
+
+#####
+GET http://127.0.0.1:8000/perfil/
+#Authorization: Basic alex:al123456
+Authorization: Basic admin:by123456
+
+####
+
+POST http://127.0.0.1:8000/perfil/
+C
+Authorization: Basic admin:by123456
+
+{
+   "username"  : "adrian", 
+   "email"     : "adrian@gmail.com",
+   "first_name": "Adrian",
+   "last_name" : "Leon",
+   "password"  : "ad123456"
+
+}
+
+####
+POST http://127.0.0.1:8000/perfil/
+content-type: application/json
+Authorization: Basic alex:al123456
+
+{
+   "username"  : "maria", 
+   "email"     : "maria@gmail.com",
+   "first_name": "Maria",
+   "last_name" : "Leon",
+   "password"  : "ma123456"
+
+}
+
+
+####
+POST http://127.0.0.1:8000/perfil/
+content-type: application/json
+
+{
+   "created"        : "2021-05-05 13:10:56.000000", 
+   "nombre"         : "Edwin Silva",
+   "email"          : "edwin@gmail.com",
+   "fecha"          : "2021-05-05",
+   "tiempoconectado": "10 horas",
+   "fechaoff"       : "2021-05-05"
+}
+
+
+#######
+
+GET http://127.0.0.1:8000/perfil/1
+
+
+
+########
+PUT http://127.0.0.1:8000/perfil/3/
+content-type: application/json
+Authorization: Basic admin:by123456
+
+{
+   "username"  : "adrian", 
+   "email"     : "adrian@gmail.com",
+   "first_name": "Adrian Beto",
+   "last_name" : "Leon",
+   "password"  : "ad123456"
+}
+
+####
+
+DELETE http://127.0.0.1:8000/perfil/100/

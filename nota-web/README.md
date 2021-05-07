@@ -47,6 +47,8 @@ djangorestframework==3.12.4<br>
 mysqlclient==2.0.3<br>
 pytz==2021.1<br>
 sqlparse==0.4.1<br>
+sqlparse==0.4.1<br>
+django-cors-headers==3.7.0<br>
 
 
 ## 🏁 Nuevo Proyecto <a name = "deployment"></a>
@@ -56,21 +58,36 @@ sqlparse==0.4.1<br>
 
 3. python manage.py createsuperuser <br>--email: byronsjimb@gmail.com --username admin pss:by123456
 
-### Prerequisites
+### CORE
 
-What things you need to install the software and how to install them.
+Trabaje simultaneamente los dos servidores
 
 ```
-Give examples
+pip install django-cors-headers
+INSTALLED_APPS = [
+    ...
+    # CORS
+    'corsheaders',
+]
+
+MIDDLEWARE = [
+    ...
+    # CORS
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
+]
+
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:8081',
+)
 
 
 ```
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
+concepto
 
 ```
 Give the example

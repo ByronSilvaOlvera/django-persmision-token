@@ -1,0 +1,68 @@
+
+
+GET http://127.0.0.1:8000/tarea/
+
+
+####
+
+POST http://127.0.0.1:8000/tarea/
+content-type: application/json
+
+{
+   "created"        : "2021-05-05 13:10:56.000000", 
+   "titulo"         : "Ir compras",
+   "descripcion"    : "comprar de semanal nenes",
+   "estado"         : "ejecutandose",
+   "fechaoff"       : "2021-05-05"
+}
+
+####
+## estado ejecutandose pausada terminada anulada
+POST http://127.0.0.1:8000/tarea/
+content-type: application/json
+
+{
+   "created"        : "2021-05-05 13:10:56.000000", 
+   "titulo"         : "arreglo terraza",
+   "descripcion"    : "soldar vigas para tendedero",
+   "estado"         : "ejecutandose", 
+   "fechaoff"       : "2021-05-05"
+}
+
+#####
+
+POST http://127.0.0.1:8000/tarea/
+content-type: application/json
+Authorization: Basic alex:al123456
+
+{
+   "created"    : "2021-05-06 13:10:56.000000", 
+   "titulo"     : "compra terraza",
+   "descripcion": "tubo gabarnizado",
+   "estado"     : "ejecutandose", 
+   "fechaoff"   : "2021-05-05",
+   "owner"      : "1",
+   "highlighted": "comentario"
+}
+
+#######
+
+GET http://127.0.0.1:8000/tarea/1/
+
+
+
+########
+PUT http://127.0.0.1:8000/tarea/2/
+content-type: application/json
+
+{
+   "created"    : "2021-05-05T13:10:56Z",
+   "titulo"     : "arreglo terraza",
+   "descripcion": "soldar vigas para tendedero",
+   "estado"     : "pausada",
+   "fechaoff"   : "2021-05-05"
+}
+
+####
+
+DELETE http://127.0.0.1:8000/tarea/100/
