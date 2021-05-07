@@ -1,15 +1,1 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.pyc
-*$py.class
 
-# C extensions
-*.pyc
-
-tarea/__pycache__
-/tarea/migrations/
-
-# Django stuff:
-
-db.sqlite3
-db.sqlite3-journal
