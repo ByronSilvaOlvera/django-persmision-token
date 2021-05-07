@@ -1,0 +1,6 @@
+
+#tarea
+tarea/migrations
+tarea/__pycache__
+
+.transito/migrations/*
