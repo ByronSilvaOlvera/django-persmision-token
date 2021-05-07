@@ -32,28 +32,38 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django.contrib.auth',
+
+     # AUTH
     'django.contrib.contenttypes',
+    'django.contrib.auth',
+    
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cliente',
+    
     'rest_framework',
     'corsheaders',
+    'rest_framework.authtoken',
 
     'snippets.apps.SnippetsConfig',
     'usuario.apps.UsuarioConfig',
     'tarea.apps.TareaConfig',
+    'transito.apps.TransitoConfig',
+    'perfiles.apps.PerfilConfig',
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
+    
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+
+    'django.middleware.security.SecurityMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
      
      #CORS
     'corsheaders.middleware.CorsMiddleware',
@@ -143,5 +153,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #paginacion 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 10,
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ],
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.IsAuthenticated',
+    # ]
 }

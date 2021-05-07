@@ -29,10 +29,25 @@ content-type: application/json
    "fechaoff"       : "2021-05-05"
 }
 
+#####
+
+POST http://127.0.0.1:8000/tarea/
+content-type: application/json
+Authorization: Basic alex:al123456
+
+{
+   "created"    : "2021-05-06 13:10:56.000000", 
+   "titulo"     : "compra terraza",
+   "descripcion": "tubo gabarnizado",
+   "estado"     : "ejecutandose", 
+   "fechaoff"   : "2021-05-05",
+   "owner"      : "1",
+   "highlighted": "comentario"
+}
 
 #######
 
-GET http://127.0.0.1:8000/tarea/2
+GET http://127.0.0.1:8000/tarea/1/
 
 
 

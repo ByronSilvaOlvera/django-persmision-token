@@ -1,0 +1,77 @@
+
+GET http://127.0.0.1:8000/api-token-auth/
+#Authorization: Basic alex:al123456
+
+###
+GET http://127.0.0.1:8000/transito/
+
+
+####
+#Authorization: Basic admin:by123456
+
+POST http://127.0.0.1:8000/transito/
+content-type: application/json
+Authorization:  Basic alex:al123456
+
+{
+   "created"     : "2021-05-05 13:10:56.000000", 
+   "inicoruta"  : "Byron Silva",
+   "destino"     : "byron@gmail.com",
+   "cliente"     : "2021-05-05",
+   "tiempovuelo" : "2 horas",
+   "fechallegada": "2021-05-05"
+}
+
+####
+
+POST http://127.0.0.1:8000/transito/
+content-type: application/json
+Authorization: Basic admin:by123456
+
+{
+   "created"     : "2021-05-05 13:10:56.000000", 
+   "inicoruta"  : "Cuenca",
+   "destino"     : "Manta",
+   "cliente"     : "Aitana Silva",
+   "tiempovuelo" : "30 minutos",
+   "fechallegada": "2021-05-05"
+}
+
+
+#######
+
+GET http://127.0.0.1:8000/transito/1
+
+
+
+########
+PUT http://127.0.0.1:8000/transito/1/
+content-type: application/json
+Authorization: Basic admin:by123456
+
+{
+  "created"     : "2021-05-05T13:10:56Z",
+  "inicoruta"   : "Sucumbios",
+  "destino"     : "Riobamba",
+  "cliente"     : "2021-05-05",
+  "tiempovuelo" : "2 horas",
+  "fechallegada": "2021-05-05"
+}
+
+#####
+PUT http://127.0.0.1:8000/transito/2/
+content-type: application/json
+Authorization: Basic admin:by123456
+
+{
+   "created"     : "2021-05-05T13:10:56Z",
+   "inicoruta"   : "Quito",
+   "destino"     : "Manta",
+   "cliente"     : "Aitana Silva",
+   "tiempovuelo" : "30 minutos",
+   "fechallegada": "2021-05-05"
+}
+  
+####
+
+DELETE http://127.0.0.1:8000/transito/100/
