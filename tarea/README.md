@@ -8,6 +8,9 @@ Crear un modelo y migrate a la BD con el contien Django ORM
     3.1 python manage.py createsuperuser
     3.2 agregar user emal pass
 
+
+## Modelo 
+Api hecha con clase genericas 
 # URL
 ## POST
 ```

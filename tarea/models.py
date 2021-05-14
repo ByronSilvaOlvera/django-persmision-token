@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Tarea(models.Model):
-    created     = models.DateTimeField(auto_now_add=False)
+    created     = models.DateTimeField(auto_now_add=True)
     titulo      = models.TextField(max_length=100, blank=True, default='')
     descripcion = models.TextField()
     estado      = models.TextField()

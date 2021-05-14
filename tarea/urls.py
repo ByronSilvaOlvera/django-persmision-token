@@ -5,7 +5,10 @@ from tarea import views
 urlpatterns = [
     path('tarea/', views.TareaList.as_view()),
     path('tarea/<int:pk>/', views.TareaDetail.as_view()),
+
+    # create / List
     path('users/', views.UserList.as_view()),
+    #update / edit /
     path('users/<int:pk>/', views.UserDetail.as_view()),
 ]
 

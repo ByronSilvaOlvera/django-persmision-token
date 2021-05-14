@@ -1,19 +1,22 @@
 
 
-GET http://127.0.0.1:8000/tarea/
+GET http://127.0.0.1:7000/tarea/
 
 
 ####
 
-POST http://127.0.0.1:8000/tarea/
+POST http://127.0.0.1:7000/tarea/
 content-type: application/json
+Authorization: Basic admin:by123456
 
 {
    "created"        : "2021-05-05 13:10:56.000000", 
    "titulo"         : "Ir compras",
    "descripcion"    : "comprar de semanal nenes",
    "estado"         : "ejecutandose",
-   "fechaoff"       : "2021-05-05"
+   "fechaoff"       : "2021-05-05",
+   "owner"          : "1",
+   "highlighted"    : "comentario"
 }
 
 ####
@@ -66,3 +69,43 @@ content-type: application/json
 ####
 
 DELETE http://127.0.0.1:8000/tarea/100/
+
+
+####
+
+GET http://127.0.0.1:7000/users/users/
+content-type: application/json
+Authorization: Basic admin:by123456
+
+
+####
+
+GET http://127.0.0.1:7000/users/users/2
+content-type: application/json
+Authorization: Basic admin:by123456
+
+
+####
+
+POST http://127.0.0.1:7000/users/users/
+Content-type: application/json
+Authorization: Basic admin:by123456
+
+{
+   "username"  : "pablo",
+   "email"     : "pablo@gmail.com"
+}
+
+####
+
+PUT http://127.0.0.1:7000/users/users/2/
+content-type: application/json
+Authorization: Basic admin:by123456
+
+{
+   "username" : "alex",
+   "password"  : "al123456",
+   "email"     : "alex@gmail.com",
+   "first_name": "Andres",
+   "last_name" : "Suarez"
+}
